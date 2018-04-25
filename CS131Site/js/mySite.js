@@ -155,12 +155,12 @@ var skillsSetter = true;
 					$('.createAccount2').velocity({'left': '-100%'});	
 
 					$('#myBody').velocity({'background-color': '#F9F9F9'}, 250);
-					$('#createAccountBox').velocity({'color': '#000000'}, 50);
+					$('#createAccountBox').velocity({'color': '#000000'}, 20);
 					
 
 					$('#titleBox').velocity({'top': '10%'}, 350);
-					$('#loginBox').velocity({'top': '55%'}, 400);
-					$('#createAccountBox').velocity({'top': '65%'}, 450);
+					$('#loginBox').velocity({'top': '55%'}, 450);
+					$('#createAccountBox').velocity({'top': '65%'}, 400);
 
 
   					
