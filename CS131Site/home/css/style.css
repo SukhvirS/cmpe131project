@@ -1,0 +1,112 @@
+
+body {
+background: #F9F9F9;
+
+	overflow:hidden;
+}
+
+.mainsection{
+
+	height:100%;
+}
+.container-fluid, .header1 {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.inputposition{
+
+	margin-top: 20%;
+	margin-left: 30%;
+	width: 50%;
+
+}
+
+.thick{
+	padding-left: 25px;
+	font-size: 40px;
+	height: 10%;
+	color: #fff;
+	font-family: 'Raleway',sans-serif;
+}
+
+.sidebar{
+	padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    height:100%;
+}
+
+
+.introBoxStyle{
+
+overflow: hidden;
+position:absolute;
+top: 40%;
+width: 20%;
+height: 8%;
+/*margin-left: -50%;*/
+border-style: solid;
+border-width: 0.1px;
+box-shadow: 1px 1px 1px #000000;
+
+}
+
+
+.introBoxStyle {
+	
+position: relative;
+
+left: 1%;
+top: 10%;
+font-size: 3vw;
+font-family: "Helvetica Neue", "Open Sans";
+font-weight: 100;
+
+}
+
+.fontChange {
+font-weight: 50;
+font-size: 1vw;
+
+
+}
+
+
+
+#profileBox{
+  position:absolute;
+  top:10%;
+  left:10%;
+	height:43%;
+}
+
+#createBox{
+  position:absolute;
+  top: 58%;
+  left: 10%;
+}
+
+#searchBox{
+  position:absolute;
+  left:10%;
+  top: 68%;
+}
+
+#manageBox{
+  position:absolute;
+  left:10%;
+  top: 78%;
+}
+
+#manageCompetitionList{
+  position:relative;
+  top:10%;
+  left: 35%;
+  height:76%;
+  width: 60%;
+}
+
