@@ -110,3 +110,42 @@ font-size: 1vw;
   width: 60%;
 }
 
+#manageCompetitionTable tr{
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+
+}
+
+#columnHeader{
+
+}
+
+#competitionColumn{
+
+  width: 60%;
+}
+
+#judgeColumn{
+  width:20%;
+}
+
+#dateColumn{
+  width: 20%;
+}
+
+table, td {
+      border: 1px solid black;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+
+    font-family: "Helvetica Neue", "Open Sans";
+font-weight: 300;
+
+}
+
+
+
