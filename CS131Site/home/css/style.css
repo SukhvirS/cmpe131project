@@ -102,10 +102,18 @@ font-size: 1vw;
   top: 78%;
 }
 
+#createCompetitionList{
+  position: relative;
+ top: -200%;
+  left: 35%;
+  height:76%;
+  width: 60%;
+}
+
 #manageCompetitionList{
   position:relative;
   top:10%;
-  left: 35%;
+  left: 200%;
   height:76%;
   width: 60%;
 }
@@ -116,6 +124,7 @@ font-size: 1vw;
 
 
 }
+
 
 #columnHeader{
 

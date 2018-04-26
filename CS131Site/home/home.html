@@ -59,9 +59,41 @@
 			    	<td> ok </td>
 			  </tr>
 		</table>
+		</div>
 
-		
-		<div> ok </div></div>
+		<div class="introBoxStyle" id="createCompetitionList">
+
+			<p class="text-center"> Create Competition</p>
+
+			<label for="competitionName">Competition Name<br></label><br>
+    		<input id="competitionInput" type="text" placeholder="Enter Competition" name="competitionName1" required></input><br>
+
+    		<label for="hostName">Host Name<br></label><br>
+    		<input id="hostInput" type="text" placeholder="Host Name" name="hostName" required></input><br>
+
+    		<label for="date">Date<br></label><br>
+    		<input id="dateInput" type="text" placeholder="Date" name="date" required></input>
+
+    		<button onclick="createCompetitionFunction()" id="createCompetitionButton" >Create</button>
+
+
+
+		</div>
+
+		<script>
+		function createCompetitionFunction() {
+		    var table = document.getElementById("manageCompetitionTable");
+		    var row = table.insertRow(1);
+		    var cell1 = row.insertCell(0);
+		    var cell2 = row.insertCell(1);
+		    var cell3 = row.insertCell(2);
+		    cell1.innerHTML = document.getElementById("competitionInput").value;
+		    cell2.innerHTML = document.getElementById("hostInput").value;
+		    cell3.innerHTML = document.getElementById("dateInput").value;
+
+		}
+		</script>
+
 
 		
 
