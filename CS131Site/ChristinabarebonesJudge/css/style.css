@@ -1,0 +1,117 @@
+
+body {
+background: #F9F9F9;
+
+	overflow:hidden;
+}
+
+
+
+
+.introBoxStyle{
+
+overflow: hidden;
+position:absolute;
+width: 20%;
+height: 8%;
+/*margin-left: -50%;*/
+border-style: solid;
+border-width: 0.1px;
+box-shadow: 1px 1px 1px #000000;
+left: 1%;
+font-size: 3vw;
+font-family: "Helvetica Neue", "Open Sans";
+font-weight: 100;
+
+
+}
+
+
+
+.fontChange {
+font-weight: 50;
+font-size: 1vw;
+
+
+}
+
+
+
+#profileBox{
+  position:absolute;
+  top:10%;
+  left:10%;
+	height:43%;
+}
+
+#editBox{
+  position:absolute;
+  top: 58%;
+  left: 10%;
+}
+
+#createBox{
+  position:absolute;
+  left:10%;
+  top: 68%;
+}
+
+#manageBox{
+  position:absolute;
+  left:10%;
+  top: 78%;
+}
+
+#createCompetitionList{
+  position: relative;
+ top: -200%;
+  left: 35%;
+  height:76%;
+  width: 60%;
+}
+
+#manageCompetitionList{
+  position:relative;
+  top:10%;
+  left: 35%;
+  height:76%;
+  width: 60%;
+}
+
+#manageCompetitionTable tr{
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+
+}
+
+
+
+#competitionColumn{
+
+  width: 60%;
+}
+
+#judgeColumn{
+  width:20%;
+}
+
+#dateColumn{
+  width: 20%;
+}
+
+table, td {
+      border: 1px solid black;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+
+    font-family: "Helvetica Neue", "Open Sans";
+font-weight: 300;
+
+}
+
+
+
