@@ -29,12 +29,11 @@
 
 
 		<div class="introBoxStyle text-center" id="profileBox">
-			<p>PROFILE<br><br><br><br></p>
-			<div class="fontChange">Name: David Huynh</div>
-			<div class="fontChange">User Type: Judge</div>
-			<div class="fontChange">Email: davidhuynh726@gmail.com</div>
-			<div class="fontChange"></div>
-			<div class="fontChange"></div>
+			<p>PROFILE</p>
+			<img id="profileImage" src="../home/img/profile1.png">
+			<div id="profileName" class="fontChange">Name: David Huynh</div>
+			<div id="profileType" class="fontChange">User Type: Judge</div>
+			<div id="profileEmail" class="fontChange">Email: davidhuynh726@gmail.com</div>
 
 
 
@@ -50,16 +49,41 @@
 <!--          EDIT PROFILE                           -->
 
 		<div class="introBoxStyle text-center" id="editProfileBox"> 
-		<p class="text-center" style="padding-top: 5px"> Edit Profile</p>
+		<p class="text-center" style="padding-top: 10px"> Edit Profile</p>
 
 			<table class="text-center" id="editProfileTable">
 				<tr>
-					<td>
-					</td>
+
+					<td>Name</td>
+					<td><input id="editProfileName" type="text" placeholder="Profile Name" name="profileName" required></input><br></td>
+
 
 
 				</tr>
+				<tr>
+					<td>Email</td>
+
+					<td><input id="editProfileEmail" type="text" placeholder="Email" name="profileEmail" required></input><br></td>
+
+
+
+				</tr>
+
+				<tr>
+					<td>User Type</td>
+
+					<td><p id="userType">Judge</p></td>
+
+				</tr>
+
+				<tr>
+					<td>Profile Picture</td>
+					<td><input  id="editProfilePicture" type="file" onchange="previewFile()"></td>
+
+				</tr>
 			</table>
+
+			<button onclick="editProfile()" id="editProfileButton" >Confirm</button>
 
 		</div>
 			
@@ -186,6 +210,25 @@
 
 		</script>
 
+		<script>
+		function editProfile() {
+		    
+
+		    var name = document.getElementById("profileName");
+		    var email = document.getElementById("profileEmail");
+
+		    name.innerHTML = "Name: " + document.getElementById("editProfileName").value;
+		    email.innerHTML = "Email: " + document.getElementById("editProfileEmail").value;
+
+
+		  
+
+
+
+		}
+
+		</script>
+
 
 		
 
@@ -202,6 +245,26 @@
 </body>
 
 <script type="text/javascript" src="js/velocity.js"></script>
+
+<script>
+   function previewFile(){
+       var preview = document.querySelector('img'); //selects the query named img
+       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+       var reader  = new FileReader();
+
+       reader.onloadend = function () {
+           preview.src = reader.result;
+       }
+
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "";
+       }
+  }
+
+  previewFile();  //calls the function named previewFile()
+  </script>
 
 
 </html>

@@ -257,6 +257,77 @@ font-weight: 300;
     color: green;
 }
 
+#profileImage {
+  height:50%; 
+  width:60%;
+}
+
+#editProfileTable {
+
+  position:relative;
+
+    left:5%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+
+    font-family: "Helvetica Neue", "Open Sans";
+    font-weight: 300;
+
+}
+
+#editProfileTable td{
+
+    width:40%;
+    padding-bottom:50px;
+    font-family: "Helvetica Neue", "Open Sans";
+font-weight: 300;
+font-size: 2vw;
+}
+
+#editProfileTable tr td label{
+
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+    text-align: center;
+    font-family: "Helvetica Neue", "Open Sans";
+    font-weight: 300;
+    font-size:2vw;
+
+}
+#editProfileTable tr td input{
+    width:70%;
+    text-align: center;
+    font-family: "Helvetica Neue", "Open Sans";
+    font-weight: 300;
+
+}
+
+#editProfileName{
+  font-weight:300;
+
+}
+
+#editProfileEmail{
+  font-weight:300;
+}
+
+#userType{
+  font-weight: 300;
+}
+
+#editProfilePicture{
+
+  font-weight:300;
+  font-size:1vw;
+}
+
+
+
+
 table, td {
       
 
