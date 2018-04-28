@@ -6,6 +6,20 @@ var setter1 = true;
 var backgroundSetter = true;
 var skillsSetter = true;
 
+function ClearFields() {
+
+  	 document.getElementById("loginEmailInput").value = "";
+     document.getElementById("passwordInput").value = "";
+     document.getElementById("firstNameInput").value="";
+     document.getElementById("lastNameInput").value="";
+     document.getElementById("createEmailInput").value="";
+
+     document.getElementById("createPasswordInput").value="";
+     document.getElementById("createConfirmPasswordInput").value="";
+
+}
+
+
 
 	$('#titleBox').velocity({'top':'10%'});
 
@@ -62,7 +76,7 @@ var skillsSetter = true;
 
 	$('#cancelBox').click(function(){
 
-						
+						ClearFields();
 						setter = false;
 
 					if (setter == false){
@@ -145,7 +159,7 @@ var skillsSetter = true;
 		});
 
 	$('#cancelBox2').click(function(){
-
+					ClearFields();
 						
 						setter = false;
 

@@ -244,8 +244,17 @@ color: #ffffff;
 
 #titleBox {
 	height: 30%;
+
+
 }
 
+#titleBox p{
+  background: -webkit-linear-gradient(#3d92ff, #faf347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+
+}
 
 .custom-select {
   position: relative;

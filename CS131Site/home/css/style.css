@@ -75,7 +75,14 @@ font-size: 1vw;
 
 }
 
+#editProfileBox{
+  position:absolute;
+  left:35%;
+  top: 200%;
+  height: 76%;
+  width: 60%;
 
+}
 
 #profileBox{
   position:absolute;
@@ -86,14 +93,14 @@ font-size: 1vw;
 
 #createBox{
   position:absolute;
-  top: 58%;
+  top: 68%;
   left: 10%;
 }
 
-#searchBox{
+#editBox{
   position:absolute;
   left:10%;
-  top: 68%;
+  top: 58%;
 }
 
 #manageBox{
@@ -108,7 +115,23 @@ font-size: 1vw;
   left: 35%;
   height:76%;
   width: 60%;
+  padding-right:5%;
+  padding-left:5%;
 }
+
+#createCompetitionList label{
+  font-weight: normal;
+  font-size: 1vw;
+
+}
+
+
+#createCompetitionList input{
+  font-weight: normal;
+  font-size: 1vw;
+
+}
+
 
 #manageCompetitionList{
   position:relative;
@@ -125,10 +148,39 @@ font-size: 1vw;
 
 }
 
+#manageCompetitionTable td{
+ border: 1px solid black;
 
-#columnHeader{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+
+    font-family: "Helvetica Neue", "Open Sans";
+font-weight: 300;
+
 
 }
+
+#manageCompetitionTable table{
+
+    border: 1px solid black;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+
+    font-family: "Helvetica Neue", "Open Sans";
+    font-weight: 300;
+
+
+}
+
+#manageColumnHeader td{
+    font-weight: 400;
+}
+
 
 #competitionColumn{
 
@@ -143,16 +195,70 @@ font-size: 1vw;
   width: 20%;
 }
 
-table, td {
-      border: 1px solid black;
+#createCompetitionTable tr td{
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+  width:40%;
+}
+#createCompetitionTable tr td label{
+
+    padding-top: 20px;
     padding-left:20px;
     padding-right: 20px;
 
     font-family: "Helvetica Neue", "Open Sans";
-font-weight: 300;
+    font-weight: 300;
+    font-size:2vw;
+
+}
+
+#createCompetitionTable tr td input{
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+    text-align: center;
+    font-family: "Helvetica Neue", "Open Sans";
+    font-weight: 300;
+    font-size:2vw;
+
+}
+
+#createCompetitionTable tr td table td{
+    font-family: "Helvetica Neue", "Open Sans";
+    font-weight: 300;
+    width:10%;
+
+}
+
+#createCompetitionTable tr td table td input{
+    width:100%;
+    text-align: center;
+    font-family: "Helvetica Neue", "Open Sans";
+    font-weight: 300;
+    font-size:1.5vw;
+
+}
+
+#createCompetitionButton{
+  position:relative;
+  left:40%;
+  right:40%;
+}
+
+
+#gradedX {
+
+      font-size: 3vw;
+      color: red;
+    }
+
+#gradedO {
+    font-size:3vw;
+    color: green;
+}
+
+table, td {
+      
 
 }
 

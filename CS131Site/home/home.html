@@ -29,56 +29,131 @@
 
 
 		<div class="introBoxStyle text-center" id="profileBox">
-			<p>PROFILE</p>
-			<p></p>
-			<div class="fontChange">David Huynh</div>
+			<p>PROFILE<br><br><br><br></p>
+			<div class="fontChange">Name: David Huynh</div>
+			<div class="fontChange">User Type: Judge</div>
+			<div class="fontChange">Email: davidhuynh726@gmail.com</div>
+			<div class="fontChange"></div>
+			<div class="fontChange"></div>
+
+
 
 
 		</div>	
+
+		<div class="introBoxStyle text-center" id="editBox"><p>EDIT</p></div>
+
 		<div class="introBoxStyle text-center" id="createBox"><p style="top: 10%">CREATE</p></div>	
-		<div class="introBoxStyle text-center" id="searchBox"><p>SEARCH</p></div>
 		<div class="introBoxStyle text-center" id="manageBox"><p>MANAGE</p></div>
 
+
+<!--          EDIT PROFILE                           -->
+
+		<div class="introBoxStyle text-center" id="editProfileBox"> 
+		<p class="text-center" style="padding-top: 5px"> Edit Profile</p>
+
+			<table class="text-center" id="editProfileTable">
+				<tr>
+					<td>
+					</td>
+
+
+				</tr>
+			</table>
+
+		</div>
 			
-		<div class="introBoxStyle" id="manageCompetitionList"><p class="text-center"> Manage</p>
+
+<!--           MANAGE COMPETITION                      -->
+
+
+		<div class="introBoxStyle" id="manageCompetitionList"><p class="text-center" style="padding-top: 5px"> Manage</p>
 
 			<table class="text-center" id="manageCompetitionTable">
-  				<tr id="columnHeader">
+
+  				<tr id="manageColumnHeader">
 				    <td id="competitionColumn">Competition</td>
 				    <td id="judgeColumn">Hosted By</td>
+				    <td id="categoryColumn">Category</td>
 				    <td id="dateColumn">Date</td>
+				    <td id="gradedColumn"> Completely Graded</td>
 			    </tr>
+
 			    <tr>
 			    	<td >MAYWEATHER COMPETITION</td>
 			    	<td >DAVE WILLIAMS</td>
-			    	<td >April 7, 2016</td>
+			    	<td >MMA</td>
+			    	<td >04/27/18</td>
+			    	<td id="gradedO">O</td>
 			    </tr>
-			    <tr>
-			    	<td >Row3 cell1</td>
-			    	<td>Row3 cell2</td>
-			    	<td> ok </td>
-			  </tr>
+
+			    
 		</table>
+
+
+
+
+
 		</div>
+   
+<!--          CREATE COMPETITION                      -->
+
 
 		<div class="introBoxStyle" id="createCompetitionList">
 
-			<p class="text-center"> Create Competition</p>
-			
-			<label for="competitionName">Competition Name<br></label><br>
-    		<input id="competitionInput" type="text" placeholder="Enter Competition" name="competitionName1" required></input><br>
+			<p class="text-center" style="padding-top:10px"> Create Competition</p>
+			<table class="text-center" id="createCompetitionTable">
+				<tr>
 
-    		<label for="hostName">Host Name<br></label><br>
-    		<input id="hostInput" type="text" placeholder="Host Name" name="hostName" required></input><br>
+					<td> <label for="competitionName">Competition Name<br></label><br></td>
+					<td> <label for="hostName">Host Name<br></label><br></td>
+					
+				</tr>
+					
+				<tr>
+					<td><input id="competitionInput" type="text" placeholder="Enter Competition" name="competitionName1" required></input><br></td>
+					<td><input id="hostInput" type="text" placeholder="Host Name" name="hostName" required></input><br></td>
+				</tr>
 
-    		<label for="date">Date<br></label><br>
-    		<input id="dateInput" type="text" placeholder="Date" name="date" required></input>
+				<tr>
 
-    		<button onclick="createCompetitionFunction()" id="createCompetitionButton" >Create</button>
+					<td><label for="date">Date mm/dd/yyyy<br></label><br></td>
+					<td><label for="date">Category<br></label><br></td>
 
+
+				</tr>
+
+					<td>
+						<table>
+							<td><input id="monthInput" type="text" placeholder="Month" name="month" required></input><br></td>
+							<td><input id="dayInput" type="text" placeholder="Day" name="day" required></input><br></td>
+							<td><input id="yearInput" type="text" placeholder="Year" name="year" required></input><br></td>
+						</table>
+						
+
+					</td>
+					<td><input id="categoryInput" type="text" placeholder="Category" name="category" required></input><br></td>
+
+
+				</tr>
+
+	    			
+
+	    			
+	    			
+
+
+    		</table>
+    			<br>
+
+	    			<button onclick="createCompetitionFunction()" id="createCompetitionButton" >Create</button>
 
 
 		</div>
+
+
+
+
 
 		<script>
 		function createCompetitionFunction() {
@@ -87,11 +162,28 @@
 		    var cell1 = row.insertCell(0);
 		    var cell2 = row.insertCell(1);
 		    var cell3 = row.insertCell(2);
+		    var cell4 = row.insertCell(3);
+		    var cell5 = row.insertCell(4);
+
+		    var day = document.getElementById("dayInput").value;
+		    var month = document.getElementById("monthInput").value;
+		    var year = document.getElementById("yearInput").value;
+
+		    var date = month + "/" + day + "/" + year;
+
+
+
 		    cell1.innerHTML = document.getElementById("competitionInput").value;
 		    cell2.innerHTML = document.getElementById("hostInput").value;
-		    cell3.innerHTML = document.getElementById("dateInput").value;
+		    cell3.innerHTML = document.getElementById("categoryInput").value;
+		    cell4.innerHTML = date;
+		    cell5.innerHTML = "X";
+		    cell5.id = "gradedX";
+
+
 
 		}
+
 		</script>
 
 

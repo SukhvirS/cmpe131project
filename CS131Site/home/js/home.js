@@ -6,71 +6,38 @@ var setter1 = true;
 var backgroundSetter = true;
 var skillsSetter = true;
 
+function ClearFields() {
 
-	$('#titleBox').velocity({'top':'10%'});
-
-	$('#titleBox').velocity({'right':'42%'}, 1000, function(){
-
-		
-
-
-		
-	});
-
-	$('#loginBox').velocity({'top':'55%'});
-
-	$('#loginBox').velocity({'right':'42%'}, 1000, function(){
-
-			
-
-	});
+     document.getElementById("competitionInput").value = "";
+     document.getElementById("hostInput").value = "";
+     document.getElementById("dayInput").value="";
+     document.getElementById("dayInput").value="";
+     document.getElementById("monthInput").value="";
+     document.getElementById("yearInput").value="";
+     document.getElementById("categoryInput").value="";
 
 
-	$('#manageBox').click(function(){
+}
 
-				setter = true;
+	$('#editBox').click(function(){
+		ClearFields();
 
-				if(setter == true){
-				
-					//$(this).velocity({'color': '#ffffff'}, 50);
-
-
-  					
-
-					//$('#myBody').velocity({'background-color': '#2c353e'});
-					//$('#loginInfo').velocity({'color': '#ffffff'}, 50);
-  				
+		  					$('#myBody').velocity({'background-color': '#87CEFA'});
 
 
-
-					$('#loginInfo').velocity({'top': '25%'});
-  					
-				
-
-					$('#manageCompetitionList').velocity({'left': '35%'}, 250);
+					$('#editProfileBox').velocity({'top': '10%'}, 250);
 					$('#createCompetitionList').velocity({'top': '-300%'}, 250);
+					$('#manageCompetitionList').velocity({'left': '200%'}, 250);
 
-  				
-
-					
-					setter = false;
-					
-					
-					
-				}
-
-
-				
-
-
-		});
+						
+	});
 
 	$('#createBox').click(function(){
 
-				setter = true;
+							$('#myBody').velocity({'background-color': '#FFFACD'});
 
-				if(setter == true){
-				
+
+			
 					//$(this).velocity({'color': '#ffffff'}, 50);
 
 
@@ -82,27 +49,65 @@ var skillsSetter = true;
 
 
 
-					$('#loginInfo').velocity({'top': '25%'});
   					
 				
 					$('#createCompetitionList').velocity({'top': '-66%'}, 250);
 
 					$('#manageCompetitionList').velocity({'left': '200%'}, 250);
   				
+					$('#editProfileBox').velocity({'top': '200%'}, 250);
 
 					
-					setter = false;
-					
-					
-					
-				}
+				
+				
 
+
+		});
+
+		$('#createCompetitionButton').click(function(){
+					ClearFields();
+
+					  $('#myBody').velocity({'background-color': '#F9F9F9'});
+
+					$('#manageCompetitionList').velocity({'left': '35%'}, 250);
+					$('#createCompetitionList').velocity({'top': '200%'}, 250);
+					$('#editProfileBox').velocity({'top': '200%'}, 250);
+
+
+	});
+
+
+
+	$('#manageBox').click(function(){
+
+		ClearFields();
+				
+					//$(this).velocity({'color': '#ffffff'}, 50);
+
+
+  					$('#myBody').velocity({'background-color': '#F9F9F9'});
+
+
+					//$('#loginInfo').velocity({'color': '#ffffff'}, 50);
+  				
+
+
+
+
+					$('#manageCompetitionList').velocity({'left': '35%'}, 250);
+					$('#createCompetitionList').velocity({'top': '200%'}, 250);
+					$('#editProfileBox').velocity({'top': '200%'}, 250);
+
+  				
+
+				
 
 				
 
 
 		});
 
+	
 
 
 

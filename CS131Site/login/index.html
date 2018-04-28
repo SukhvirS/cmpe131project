@@ -36,13 +36,15 @@
 			<li class="loginInfoStyle" id="loginInfo">
 
 			<label for="email"><b style="left: 40%">Email<br></b></label><br>
-    		<input type="text" placeholder="Enter Username" name="email" required></input>
+    		<input id="loginEmailInput" type="text" placeholder="Enter Email" name="email" required></input>
 
 			<label for="psw"><b>Password</b></label>
-   			<input type="password" placeholder="Enter Password" name="psw" required>
+   			<input id="passwordInput" type="password" placeholder="Enter Password" name="psw" required>
 
-   			<div class="text-center" id= "signInBox"> SIGN IN</div>
+   			<div class="text-center" id= "signInBox" onclick="location.href='../home/home.html'";> SIGN IN</div>
    			<div class="text-center" id= "cancelBox"> CANCEL </div>
+
+
 
 			</li>
 
@@ -55,15 +57,14 @@
 			<li class="createAccount1" id="loginInfo">
 
 			<label for="firstName"><b>First Name<br></b></label><br>
-    		<input type="text" placeholder="Enter First Name" name="firstName" required></input>
+    		<input id="firstNameInput" type="text" placeholder="Enter First Name" name="firstName" required></input>
     		<label for="lastName"><b>Last Name<br></b></label><br>
-    		<input type="text" placeholder="Enter Last Name" name="lastName" required></input>
+    		<input id="lastNameInput" type="text" placeholder="Enter Last Name" name="lastName" required></input>
 
 			<label for="createEmail"><b style="left: 20%">Email</b></label>
-   			<input type="text" placeholder="Enter Email" name="createEmail" required>
+   			<input id="createEmailInput" type="text" placeholder="Enter Email" name="createEmail" required>
 
-   			<label for="createUserName"><b>User Name<br></b></label><br>
-    		<input type="text" placeholder="Enter User Name" name="createUserName" required></input>
+ 
 
 			</li>
 
@@ -82,9 +83,9 @@
 			<div style="height: 2%""></div>
 
 
-    		<div class="custom-select" style="width:200px;">
-  				<select>
-   					 <option value="0">Select User Type:</option>
+    		<div id="selectInput" class="custom-select" style="width:200px;">
+  				<select data-default="0">
+   					 	<option value="0">Select User Type:</option>
     					<option value="1">Student</option>
 					    <option value="2">Judge</option>
 					  
@@ -93,9 +94,9 @@
 			<div style="height: 4%"></div>
 
 			<label for="createPassword"><b>Password<br></b></label><br>
-    		<input type="text" placeholder="Enter Password" name="createPassword" required></input>
+    		<input id="createPasswordInput" type="text" placeholder="Enter Password" name="createPassword" required></input>
     		<label for="confirmPassword" style="left:-10%"><b>Confirm Password<br></b></label><br>
-    		<input type="text" placeholder="Enter Password" name="confirmPassword" required></input>
+    		<input id="createConfirmPasswordInput" type="text" placeholder="Enter Password" name="confirmPassword" required></input>
 
 			<div class="text-center" id="submitButton">Submit</div>
 
