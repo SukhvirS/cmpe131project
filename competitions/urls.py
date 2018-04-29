@@ -12,6 +12,7 @@ urlpatterns =[
     path('signup/', competition_views.signup, name = 'signup'),
     path('profile/', views.profile, name = 'profile'),
     path('create_competition/', views.create_competition, name='create_competition'),
+    path('save_competition/', views.save_competition, name='save_competition'),
     path('competitions/', views.competitions, name ='competitions'),
     path('logout/', auth_views.logout, {'next_page': "/"}, name='logout'),
     path('admin/', admin.site.urls),

@@ -1,10 +1,11 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from .forms import CreateCompetiton
+from .models import Competition
 
 redirect_homepage = ''
 
@@ -31,9 +32,26 @@ def signup(request):
 
 def create_competition(request):
     template_name = 'registration/create_competition.html'
+    if request.method == 'GET':
+        form = CreateCompetiton(request.POST)
+    else:
+        if form.is_valid():
+            title = form.cleaned_data['competition_title']
+
     form = CreateCompetiton(request.POST)
     context = {
     'form': form
+    }
+    return render(request, template_name, context)
+
+def save_competition(request):
+    template_name = 'registration/save_competition.html'
+    comp_title = request.POST.get('competition_title')
+    comp = Competition()   #creates new competition object
+    comp.competition_title = comp_title     #sets competition title to the one gotten from the form
+    comp.save()         #saves competition object to model (database)
+    context = {
+        'comp': comp
     }
     return render(request, template_name, context)
 

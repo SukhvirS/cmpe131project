@@ -2,9 +2,9 @@
 
 {% block content %}
   <h2> Create a new competition</h2>
-  <form action="{% url 'competitions' %}" method="post">
+  <form action="{% url 'save_competition' %}" method="post">
     {% csrf_token%}
-    {{ form.competition_title}}
+    {{ form.competition_title }}
     <input type="submit" value="Submit"/>
   </form>
 
