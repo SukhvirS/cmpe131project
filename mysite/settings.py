@@ -115,7 +115,7 @@ USE_L10N = True
 USE_TZ = True
 
 # when you login, it takes you to the profile page
-LOGIN_REDIRECT_URL = 'profile'
+LOGIN_REDIRECT_URL = 'index'
 
 
 # Static files (CSS, JavaScript, Images)

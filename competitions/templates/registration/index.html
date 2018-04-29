@@ -1,4 +1,14 @@
-<html>
-  <h1>Welcome to Spartan CJapp</h1>
-  <a href="http://127.0.0.1:8000/login/">Login</a>
-</html>
+{% extends 'registration/base.html' %}
+
+{% block content %}
+  <html>
+    {% if not request.user.is_authenticated %}
+    <a href="login/">Login</a>
+    <a href="signup/">Signup</a>
+    {% else %}
+    <a href ="logout/">Logout</a>
+    <a href="competitions/">Competitions</a>
+    <a href="create_competition/">Create a new Competition</a>
+    {% endif %}
+  </html>
+{% endblock %}
