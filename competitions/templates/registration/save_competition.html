@@ -2,5 +2,14 @@
 
 {% block content %}
   <h2>Competition has been created</h2>
+  <label>Title:</label>
   {{ comp.competition_title }}
+
+  <br>
+  <label>Created on:</label>
+  {{ comp.created_at }}
+
+  <br>
+  <a href='/profile/'>Profile</a>
+  <a href='/competitions/'>Competitions</a>
 {% endblock %}

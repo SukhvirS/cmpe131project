@@ -1,6 +1,11 @@
 {% extends 'registration/base.html'%}
 
 {% block content %}
-<h2>Competitions</h2>
-
+  <h2>Competitions</h2>
+  <br>
+  {% for competition in competitions %}
+    <h3>{{ competition.competition_title }}</h3>
+    <p>{{ competition.created_at }}</p>
+    <br>
+  {% endfor %}
 {% endblock %}

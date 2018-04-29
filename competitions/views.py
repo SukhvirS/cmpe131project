@@ -57,7 +57,11 @@ def save_competition(request):
 
 def competitions(request):
     template_name = 'registration/competitions.html'
-    return render(request, template_name)
+    competitions = Competition.objects.all()
+    context = {
+        'competitions': competitions
+    }
+    return render(request, template_name, context)
 
 def profile(request):
     if not request.user.is_authenticated():
