@@ -21,7 +21,7 @@ function ClearFields() {
 
 					$('#editProfileBox').velocity({'top': '10%'}, 250);
 					$('#enterCompetition').velocity({'top': '-300%'}, 250);
-					$('#manageCompetitionList').velocity({'left': '200%'}, 250);
+					$('#manageEntriesList').velocity({'left': '200%'}, 250);
 
 						
 	});
@@ -48,7 +48,7 @@ function ClearFields() {
 				
 					$('#enterCompetition').velocity({'top': '-66%'}, 250);
 
-					$('#manageCompetitionList').velocity({'left': '200%'}, 250);
+					$('#manageEntriesList').velocity({'left': '200%'}, 250);
   				
 					$('#editProfileBox').velocity({'top': '200%'}, 250);
 
@@ -64,7 +64,7 @@ function ClearFields() {
 
 					  $('#myBody').velocity({'background-color': '#F9F9F9'});
 
-					$('#manageCompetitionList').velocity({'left': '35%'}, 250);
+					$('#manageEntriesList').velocity({'left': '35%'}, 250);
 					$('#enterCompetition').velocity({'top': '200%'}, 250);
 					$('#editProfileBox').velocity({'top': '200%'}, 250);
 
@@ -89,7 +89,7 @@ function ClearFields() {
 
 
 
-					$('#manageCompetitionList').velocity({'left': '35%'}, 250);
+					$('#manageEntriesList').velocity({'left': '35%'}, 250);
 					$('#enterCompetition').velocity({'top': '200%'}, 250);
 					$('#editProfileBox').velocity({'top': '200%'}, 250);
 
