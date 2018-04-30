@@ -1,0 +1,322 @@
+
+body {
+background: #F9F9F9;
+
+  overflow:hidden;
+
+
+}
+
+
+.mainsection{
+
+  height:100%;
+}
+.container-fluid, .header1 {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.inputposition{
+
+  margin-top: 20%;
+  margin-left: 30%;
+  width: 50%;
+
+}
+
+.thick{
+  padding-left: 25px;
+  font-size: 40px;
+  height: 10%;
+  color: #fff;
+  font-family: 'Raleway',sans-serif;
+}
+
+.sidebar{
+  padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    height:100%;
+}
+
+
+.introBoxStyle{
+
+overflow: hidden;
+position:absolute;
+top: 40%;
+width: 20%;
+height: 8%;
+/*margin-left: -50%;*/
+border-style: solid;
+border-width: 0.1px;
+box-shadow: 1px 1px 1px #000000;
+
+}
+
+
+.introBoxStyle {
+  
+position: relative;
+
+left: 1%;
+top: 10%;
+font-size: 3vw;
+font-family: "Helvetica Neue", "Open Sans";
+font-weight: 100;
+
+}
+
+.fontChange {
+font-weight: 50;
+font-size: 1vw;
+
+
+}
+
+#editProfileBox{
+  position:absolute;
+  left:35%;
+  top: 200%;
+  height: 76%;
+  width: 60%;
+
+}
+
+#profileBox{
+  position:absolute;
+  top:10%;
+  left:10%;
+  height:43%;
+}
+
+#enterBox{
+  position:absolute;
+  top: 68%;
+  left: 10%;
+}
+
+#editBox{
+  position:absolute;
+  left:10%;
+  top: 58%;
+}
+
+#manageBox{
+  position:absolute;
+  left:10%;
+  top: 78%;
+}
+
+#manageEntriesList{
+  position:relative;
+  top:10%;
+  left: 35%;
+  height:76%;
+  width: 60%;
+}
+
+#manageEntriesTable tr{
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+
+}
+
+#manageEntriesTable td{
+ border: 1px solid black;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+
+    font-family: "Helvetica Neue", "Open Sans";
+font-weight: 300;
+
+
+}
+
+#manageEntriesTable table{
+
+    border: 1px solid black;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+
+    font-family: "Helvetica Neue", "Open Sans";
+    font-weight: 300;
+
+
+}
+
+#manageColumnHeader td{
+    font-weight: 400;
+}
+
+#competitionColumn{
+
+  width: 60%;
+}
+
+#categoryColumn{
+  width:20%;
+}
+
+#titleColumn{
+  width:20%;
+}
+
+#dateColumn{
+  width: 20%;
+}
+
+#categoriesList{
+  position: relative;
+  font:bold;
+  width: 1%;
+}
+
+#deadlineColumn{
+  font:bold;
+  width: 100%;
+
+}
+
+
+
+
+#enterCompetition{
+  position: relative;
+ top: -200%;
+  left: 35%;
+  height:76%;
+  width: 60%;
+  padding-right:5%;
+  padding-left:5%;
+}
+
+#enterCompetition label{
+  font-weight: normal;
+  font-size: 1vw;
+
+}
+
+
+#enterCompetition input{
+  font-weight: normal;
+  font-size: 1vw;
+
+}
+
+#enterCompetitionTable table{
+
+    border: 1px solid black;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+
+    font-family: "Helvetica Neue", "Open Sans";
+    font-weight: 300;
+
+
+}
+
+#enterCompetitionTable tr{
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+
+}
+
+#enterCompetitionTable td{
+ border: 1px solid black;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+
+    font-family: "Helvetica Neue", "Open Sans";
+font-weight: 300;
+
+
+}
+
+
+
+
+
+#submitBox{
+  position:absolute;
+  left:10%;
+  top: 88%;
+}
+
+
+
+#submitEntriesPanel{
+  position:relative;
+  top:10%;
+  left: 35%;
+  height:76%;
+  width: 60%;
+}
+
+#submitBoxTable tr{
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+
+}
+
+#submitBoxTable td{
+ border: 1px solid black;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+
+    font-family: "Helvetica Neue", "Open Sans";
+font-weight: 300;
+
+
+}
+
+
+
+
+
+
+
+
+#gradeColumn{
+  width: 20%;
+  }
+
+
+
+
+#gradedX {
+
+      font-size: 3vw;
+      color: red;
+    }
+
+#gradedO {
+    font-size:3vw;
+    color: green;
+}
+
+
+
+

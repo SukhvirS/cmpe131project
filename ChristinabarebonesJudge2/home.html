@@ -1,0 +1,283 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+
+
+<script type="text/javascript" src="js/home.js"></script>
+<script type="text/javascript" src="js/velocity.min.js"></script>
+<head>
+
+<title>Dave's Website</title>
+<meta charset="utf-8">
+		<meta name="viewport" content="width=device=width, initial-scale=1.0">
+		<meta name="description" content="Dave's Website">
+		<meta name="author" content="Dave">	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, minimal-ui">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
+
+		<title>Dave's Website</title>
+		<link rel ="stylesheet" href= "css/bootstrap.css">
+		<link rel ="stylesheet" href="css/style.css">
+	
+
+
+
+
+
+
+
+
+</head>
+<body id="myBody">
+
+
+
+
+		<div class="introBoxStyle text-center" id="profileBox">
+			<p>PROFILE<br><br><br><br></p>
+
+			<div class="fontChange text">Name: David Huynh</div>
+			<div class="fontChange">User Type: Student</div>
+			<div class="fontChange">Email: davidhuynh726@gmail.com</div>
+			<div class="fontChange"></div>
+			<div class="fontChange"></div>
+
+		</div>
+
+		<div class="introBoxStyle text-center" id="editBox"><p>EDIT</p></div>
+
+		<div class="introBoxStyle text-center" id="enterBox"><p style="top: 10%">ENTER</p></div>	
+		<div class="introBoxStyle text-center" id="manageBox"><p>MANAGE</p></div>
+
+
+<!--		Boxes                     -->
+
+<!--          EDIT PROFILE                           -->
+
+		<div class="introBoxStyle text-center" id="editProfileBox"> 
+		<p class="text-center" style="padding-top: 5px"> Edit Profile</p>
+
+			<table class="text-center" id="editProfileTable">
+				<tr>
+					<td>
+					</td>
+
+
+				</tr>
+			</table>
+
+		</div>
+
+<!--           MANAGE ENTRIES                      -->
+
+
+		<div class="introBoxStyle" id="manageEntriesList"><p class="text-center" style="padding-top: 5px"> Submissions</p>
+
+			<table class="text-center" id="manageEntriesTable">
+
+  				<tr id="manageColumnHeader">
+				    <td id="competitionColumn">Competition</td>
+				    <td id="categoryColumn">Category</td>
+				    <td id="titleColumn">Title</td>
+				    <td id="dateColumn">Submission Date</td>
+				    <td id="gradeColumn"> Grade</td>
+			    </tr>
+
+			    <tr>
+			    	<td >MAYWEATHER COMPETITION</td>
+			    	<td >MMA</td>
+			    	<td >Who I think would win </td>
+			    	<td >04/27/18</td>
+			    	<td id="gradedNA">N/A</td>
+			    </tr>
+
+			    
+		</table>
+
+
+
+		</div>
+
+
+<!-- 		SEARCH COMPETITION 			-->
+
+	<div class="introBoxStyle" id="manageEntriesList"><p class="text-center" style="padding-top: 5px"> Competition Search</p>
+
+			<table class="text-center" id="enterCompetitionTable">
+			<tr id="manageColumnHeader">
+				<td id
+				="categoriesList">Catergories</td>
+			</tr>
+			<tr>
+				<td><a href="#" id="food_category">FOOD</a></td>
+			</tr>
+
+			<tr>
+				<td><a href="">Photography</a></td>
+			</tr>
+
+			<tr>
+				<td><a href="">Research</a></td>
+			</tr>
+
+			<tr>
+				<td><a href="">Writing</a></td>
+			</tr>
+
+
+			</div>
+
+
+<!--           LIST COMPETITIONS                      -->
+
+
+		<div class="introBoxStyle" id="food_category"><p class="text-center" style="padding-top: 5px"> FOOD</p>
+
+			<table class="text-center" id="manageCompetitionTable">
+
+  				<tr id="manageColumnHeader">
+				    <td id="competitionColumn">Competition</td>
+				    <td id="judgeColumn">Hosted By</td>
+				    <td id="categoryColumn">Category</td>
+				    <td id="dateColumn">Deadline</td>
+			    </tr>
+
+			    <tr>
+			    	<td><a href="#" id="01">CAKE DESIGN COMPETITION</a></td>
+			    	<td >Borden Bamsey</td>
+			    	<td >Cake Wars</td>
+			    	<td >06/27/18</td>
+			    </tr>
+
+			    <tr>
+			    	<td><a href="#" id="02">EATING COMPETITION</a></td>
+			    	<td >DAVID HUYNH</td>
+			    	<td >FOOD</td>
+			    	<td >05/31/18</td>
+			    </tr>
+		</table>
+</div>
+
+
+
+
+<!--          SUBMIT ENTRY                           -->
+
+		<div class="introBoxStyle text-center" id="01"> 
+		<p class="text-center" style="padding-top: 5px"> Submit Entry</p>
+
+			<table class="text-center" id="submitBoxTable">
+				<tr>
+
+					<td> <label for="entryName">Enter Name of Entry<br></label><br></td>
+					<td> <label for="contestantName">Host Name<br></label><br></td>
+					
+				</tr>
+					
+				<tr>
+					<td><input id="entryInputTitle" type="text" placeholder="John Doe" name="entryName1" required></input><br></td>
+					<td><input id="entryInputName" type="text" placeholder="Name of contestant" name="contestantName" required></input><br></td>
+				</tr>
+
+				<tr>
+
+					<td><label for="date">Date mm/dd/yyyy<br></label><br></td>
+					<td><label for="date">Category<br></label><br></td>
+
+
+				</tr>
+
+					<td>
+						<table>
+							<td><input id="entryDescription" type="text" placeholder="Please enter a description of your submission." name="description" required></input><br></td>
+
+
+				</tr>
+			</table>
+			<p id="submited"></p>
+			<button onclick="submitButton()">Submit</button>
+
+		</div>
+
+
+
+
+
+<script>
+	function submitButton() {
+
+    document.getElementById("submitted").innerHTML = "Entry has been submitted";
+    var entryID = entryIdGenerator();
+	}
+	</script>
+
+	<script>
+		function entryIdGenerator(){
+			return aNumberGenerator()+aNumberGenerator()+'-'+aNumberGenerator()+aNumberGenerator()+aNumberGenerator();
+		}
+
+
+	</script>
+
+	<script>
+		function aNumberGenerator(){
+		return Math.floor((1+Math.random())*0x10000).toString(16).substring(1);
+	}
+
+	</script>
+		
+<script>
+		function createEntry() {
+		    var table = document.getElementById("manageCompetitionTable");
+		    var row = table.insertRow(1);
+		    var cell1 = row.insertCell(0);
+		    var cell2 = row.insertCell(1);
+		    var cell3 = row.insertCell(2);
+		    var cell4 = row.insertCell(3);
+		    var cell5 = row.insertCell(4);
+
+		    var day = document.getElementById("dayInput").value;
+		    var month = document.getElementById("monthInput").value;
+		    var year = document.getElementById("yearInput").value;
+
+		    var date = month + "/" + day + "/" + year;
+
+
+
+		    cell1.innerHTML = document.getElementById("competitionInput").value;
+		    cell2.innerHTML = document.getElementById("hostInput").value;
+		    cell3.innerHTML = document.getElementById("categoryInput").value;
+		    cell4.innerHTML = date;
+		    cell5.innerHTML = "X";
+		    cell5.id = "gradedX";
+
+
+
+		}
+
+		</script>
+
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+<script type="text/javascript" src="js/velocity.js"></script>
+
+
+
+</html>
