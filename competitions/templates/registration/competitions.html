@@ -5,7 +5,6 @@
   <br>
   {% for competition in competitions %}
     <a href="{% url 'competition_page' competition.id %}"/>{{competition.competition_title}}</a>
-    <p>{{ competition.created_at }}</p>
     <br>
   {% endfor %}
 {% endblock %}

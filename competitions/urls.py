@@ -10,7 +10,6 @@ urlpatterns =[
     path('',views.index, name = 'index'),
     path('login/', auth_views.login, name = 'login'),
     path('signup/', competition_views.signup, name = 'signup'),
-    path('profile/', views.profile, name = 'profile'),
     path('create_competition/', views.create_competition, name='create_competition'),
     path('save_competition/', views.save_competition, name='save_competition'),
     path('competitions/', views.competitions, name ='competitions'),

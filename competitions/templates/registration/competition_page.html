@@ -1,10 +1,8 @@
 {% extends 'registration/base.html' %}
 
 {% block content %}
-  {% block title %}
-    {{competition.competition_title}}
-  {%endblock%}
 
-  <h1>{{competition.competition_title}}<h1>
+  <h2>{{competition.competition_title}}<h2>
+  <p>{{ competition.created_at }}</p>
 
 {% endblock %}

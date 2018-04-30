@@ -70,8 +70,3 @@ def competition_page(request, comp_id):
         'competition': competition
     }
     return render(request, template_name, context)
-
-def profile(request):
-    if not request.user.is_authenticated():
-        return render(request, redirect_homepage)
-    return render(request, 'registration/profile.html')
