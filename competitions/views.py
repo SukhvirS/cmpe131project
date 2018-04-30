@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
-from .forms import CreateCompetiton
+from .forms import CreateCompetiton, SignUpForm
 from .models import Competition
 
 redirect_homepage = ''
@@ -18,7 +18,7 @@ def index(request):
 
 def signup(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = SignUpForm(request.POST)
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
@@ -27,7 +27,7 @@ def signup(request):
             login(request, user)
             return redirect('index')
     else:
-        form = UserCreationForm()
+        form = SignUpForm()
     return render(request, 'registration/signup.html', {'form': form})
 
 def create_competition(request):
@@ -60,6 +60,14 @@ def competitions(request):
     competitions = Competition.objects.all()
     context = {
         'competitions': competitions
+    }
+    return render(request, template_name, context)
+
+def competition_page(request, comp_id):
+    template_name = 'registration/competition_page.html'
+    competition = Competition.objects.get(id=comp_id)
+    context = {
+        'competition': competition
     }
     return render(request, template_name, context)
 
