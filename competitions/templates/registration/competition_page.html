@@ -2,7 +2,7 @@
 
 {% block content %}
 
-  <h2>{{competition.competition_title}}<h2>
-  <p>{{ competition.created_at }}</p>
-
+  <h2>{{ competition.competition_title }}</h2>
+  <i>{{ competition.created_at }}</i>
+  <p>{{ competition.competition_description }}</p>
 {% endblock %}

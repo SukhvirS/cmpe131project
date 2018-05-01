@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{% block title %}SJSU CJapp{% endblock %}</title>
+    <title>{% block title %}Spartan CJapp{% endblock %}</title>
   </head>
   <body>
     <header>
       {% if user.is_authenticated %}
         <h1>{{user.first_name}} {{user.last_name}}'s Profile</h1>
       {% else %}
-        <h1>Welcome to SJSU CJapp</h1>
+        <h1>Welcome to Spartan CJapp</h1>
       {% endif %}
       <hr>
     </header>

@@ -4,8 +4,9 @@
   <h2> Create a new competition</h2>
   <form action="{% url 'save_competition' %}" method="post">
     {% csrf_token%}
-    <labeLl>Title:</label>
-    {{ form.competition_title }}
+    Title:{{ form.competition_title }}
+    <br>
+    Description:{{ form.competition_description }}
     <input type="submit" value="Submit"/>
   </form>
 

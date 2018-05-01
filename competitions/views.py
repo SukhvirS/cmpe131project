@@ -47,8 +47,10 @@ def create_competition(request):
 def save_competition(request):
     template_name = 'registration/save_competition.html'
     comp_title = request.POST.get('competition_title')
+    comp_desc = request.POST.get('competition_description')
     comp = Competition()   #creates new competition object
     comp.competition_title = comp_title     #sets competition title to the one gotten from the form
+    comp.competition_description = comp_desc
     comp.save()         #saves competition object to model (database)
     context = {
         'comp': comp
@@ -70,3 +72,25 @@ def competition_page(request, comp_id):
         'competition': competition
     }
     return render(request, template_name, context)
+
+#def submit_file(request, comp_id):
+     # Handle file upload
+#    if request.method == 'POST':
+#        form = Submission(request.POST, request.FILES)
+#        if form.is_valid():
+#            new_submission = Submission( = request.FILES['submission'])
+#            new_submission.user_id = User.objects.get(id=user_id)
+#            new_submission.comp_id = Competition.objects.get(id=comp_id)
+#            new_submission.save()
+#
+            # Redirect to the document list after POST
+#            return HttpResponseRedirect(reverse('myapp.views.list'))
+#    else:
+#        form = Submission() # A empty, unbound form
+#
+#    # Render list page with the documents and the form
+#    return render_to_response(
+#        'myapp/list.html',
+#        {'documents': documents, 'form': form},
+#        context_instance=RequestContext(request)
+#    )
