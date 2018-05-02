@@ -4,11 +4,22 @@
   <html>
     {% if not request.user.is_authenticated %}
     <a href="login/">Login</a>
+    <br>
     <a href="signup/">Signup</a>
     {% else %}
-    <a href ="logout/">Logout</a>
-    <a href="competitions/">Competitions</a>
-    <a href="create_competition/">Create a new Competition</a>
+      {% if user.profile.is_judge %}
+        <a href="competitions/">View Competitions</a>
+        <br>
+        <a href="create_competition/">Create a new Competition</a>
+        <br>
+        <a href ="logout/">Logout</a>
+        <br>
+        {% else %}
+        <a href="competitions/">View Competitions</a>
+        <br>
+        <a href ="logout/">Logout</a>
+        <br>
+        {% endif %}
     {% endif %}
   </html>
 {% endblock %}

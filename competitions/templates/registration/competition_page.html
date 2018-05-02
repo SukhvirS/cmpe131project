@@ -3,6 +3,10 @@
 {% block content %}
 
   <h2>{{ competition.competition_title }}</h2>
+  Created On:
   <i>{{ competition.created_at }}</i>
+  <br>
+  Deadline:
+  <i>{{ competition.deadline }}</i>
   <p>{{ competition.competition_description }}</p>
 {% endblock %}

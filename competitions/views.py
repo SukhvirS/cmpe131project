@@ -48,9 +48,11 @@ def save_competition(request):
     template_name = 'registration/save_competition.html'
     comp_title = request.POST.get('competition_title')
     comp_desc = request.POST.get('competition_description')
+    comp_deadline = request.POST.get('deadline')
     comp = Competition()   #creates new competition object
     comp.competition_title = comp_title     #sets competition title to the one gotten from the form
     comp.competition_description = comp_desc
+    comp.deadline = comp_deadline
     comp.save()         #saves competition object to model (database)
     context = {
         'comp': comp

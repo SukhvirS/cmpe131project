@@ -3,6 +3,7 @@
   <h2>Sign up</h2>
   <form method="post">
     {% csrf_token %}
+
     {% for field in form %}
       <p>
         {{ field.label_tag }}<br>
@@ -15,6 +16,11 @@
         {% endfor %}
       </p>
     {% endfor %}
+    <i>Judges can create, view, and judge competitions.</i>
+    <br>
+    <i>Non-judges can view and submit files to competitions.</i>
+    <br>
+    <br>
     <button type="submit">Sign up</button>
   </form>
 {% endblock %}
