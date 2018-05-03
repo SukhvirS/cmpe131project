@@ -8,10 +8,9 @@ from django.forms import ModelForm
 class SignUpForm(UserCreationForm):
     email = forms.EmailField(max_length=254, help_text='Required. Input a valid email address.')
     last_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
-    is_judge = forms.BooleanField()
     class Meta:
         model = User
-        fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2', )
+        fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2')
 
 class CreateCompetiton(ModelForm):
     competition_title = forms.CharField(label = "Title", max_length = 200)
