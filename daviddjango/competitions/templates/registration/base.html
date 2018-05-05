@@ -1,0 +1,163 @@
+{% load static from staticfiles %}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+
+
+<script type="text/javascript" src="{% static 'login/js/mySite.js' %} "></script>
+<script type="text/javascript" src="{% static 'login/js/velocity.min.js' %} "></script>
+
+
+<head>
+
+<title>Dave's Website</title>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'login/css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'login/css/bootstrap.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'competition1/css/newComp.css' %}">
+
+</head>
+
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}SJSU CJapp{% endblock %}</title>
+  </head>
+  <body >
+    <header>
+      {% if user.is_authenticated %}
+        <h1>{{user.first_name}} {{user.last_name}}'s Profile</h1>
+
+          <a href='/'>Home</a>
+
+      {% else %}
+        
+      {% endif %}
+      <hr>
+    </header>
+      {% block content %}
+      {% endblock %}
+  </body>
+</html>
+
+
+
+<!--
+<body id="myBody">
+
+
+
+
+    <div class="introBoxStyle text-center" id="titleBox"><p>SJSU <br>SPARTAN <br>APP</p></div>  
+    <div class="introBoxStyle text-center" id="loginBox"><p>LOGIN</p></div> 
+    <div class="introBoxStyle text-center" id="createAccountBox"><p>CREATE ACCOUNT</p></div>  
+
+<ul >
+      <li class="loginInfoStyle" id="loginInfo">
+
+      <label for="email"><b style="left: 40%">Email<br></b></label><br>
+        <input id="loginEmailInput" type="text" placeholder="Enter Email" name="email" required></input>
+
+      <label for="psw"><b>Password</b></label>
+        <input id="passwordInput" type="password" placeholder="Enter Password" name="psw" required>
+
+        <div class="text-center" id= "signInBox" onclick="location.href='../home/home.html'";> SIGN IN</div>
+        <div class="text-center" id= "cancelBox"> CANCEL </div>
+
+
+
+      </li>
+
+    
+    </ul>
+
+
+
+
+
+    <ul >
+      <li class="createAccount1" id="loginInfo">
+
+      <label for="firstName"><b>First Name<br></b></label><br>
+        <input id="firstNameInput" type="text" placeholder="Enter First Name" name="firstName" required></input>
+        <label for="lastName"><b>Last Name<br></b></label><br>
+        <input id="lastNameInput" type="text" placeholder="Enter Last Name" name="lastName" required></input>
+
+      <label for="createEmail"><b style="left: 20%">Email</b></label>
+        <input id="createEmailInput" type="text" placeholder="Enter Email" name="createEmail" required>
+
+ 
+
+      </li>
+
+    
+    </ul>
+
+    <ul  class="createAccount2" id="loginInfo">
+      
+
+
+
+
+      
+        <label for="createUserType"><b>User Type<br></b></label><br>
+
+      <div style="height: 2%""></div>
+
+
+        <div id="selectInput" class="custom-select" style="width:200px;">
+          <select data-default="0">
+              <option value="0">Select User Type:</option>
+              <option value="1">Student</option>
+              <option value="2">Judge</option>
+            
+         </select>
+      </div>
+      <div style="height: 4%"></div>
+
+      <label for="createPassword"><b>Password<br></b></label><br>
+        <input id="createPasswordInput" type="text" placeholder="Enter Password" name="createPassword" required></input>
+        <label for="confirmPassword" style="left:-10%"><b>Confirm Password<br></b></label><br>
+        <input id="createConfirmPasswordInput" type="text" placeholder="Enter Password" name="confirmPassword" required></input>
+
+      <div class="text-center" id="submitButton">Submit</div>
+
+      <div class="text-center" id="cancelBox2">Cancel</div>
+
+      
+      
+
+    
+    </ul>
+
+    
+
+    
+
+
+
+
+    <div id="container"></div>
+
+
+
+<script>
+$( "#container" ).hide();
+
+</script>
+
+
+
+</body>
+
+
+
+</html>
+
+--->

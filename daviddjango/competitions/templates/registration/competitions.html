@@ -1,0 +1,10 @@
+{% extends 'registration/base.html'%}
+
+{% block content %}
+  <h2>All Competitions</h2>
+  <br>
+  {% for competition in competitions %}
+    <a href="{% url 'competition_page' competition.id %}"/>{{competition.competition_title}}</a>
+    <br>
+  {% endfor %}
+{% endblock %}

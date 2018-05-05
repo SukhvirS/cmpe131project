@@ -1,0 +1,27 @@
+{% extends 'registration/base.html' %}
+
+{% block content %}
+
+  <p style=" position:relative; left:40%; font-size: 2vw"> Sign up</p>
+  <form method="post" style="position:absolute; left:30%; width:30%; height:10%;">
+    {% csrf_token %}
+    {% for field in form %}
+      <p>
+        {{ field.label_tag }}<br>
+        {{ field }}
+        <!--{% if field.help_text %}
+          <small style="color: grey">{{ field.help_text }}</small>
+        {% endif %}-->
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+    {% endfor %}
+    <button style="position: absolute; top: 800%; left: 110%; width: 30%; "type="submit">Sign up</button>
+  </form>
+
+
+
+
+    
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'registration/base.html' %}
+{% block content %}
+
+  <form method="post">
+    {% csrf_token %}
+
+      <div style="position:absolute; top:20%; left:35%; width: 100%">
+
+      <label class="loginInfo" for="email"><b style="
+      	position: relative;
+left: 60%;
+top: 20%;
+font-size: 3vw;
+font-family: 'Helvetica Neue', 
+'Open Sans';
+font-weight: 100;
+
+
+      ">Email<br></b></label><br>
+      <div style="width: 30%" id="loginEmailInput"> {{form.username}}</div>
+
+      <label for="psw"><b style="position: relative;
+left: 25%;
+top: 20%;
+font-size: 3vw;
+font-family: 'Helvetica Neue', 
+'Open Sans';
+font-weight: 100;
+
+">Password</b></label>
+      <div style="width:30%" id="passwordInput"> {{form.password}}</div>
+
+          <button type="submit">Login</button>
+
+      </div>
+
+  </form>
+
+  
+{% endblock %}
+

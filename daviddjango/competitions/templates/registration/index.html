@@ -1,0 +1,24 @@
+{% extends 'registration/base.html' %}
+
+{% block content %}
+  <html>
+    {% if not request.user.is_authenticated %}
+
+    <div class="introBoxStyle text-center" id="titleBox"><p>SJSU <br>SPARTAN <br>APP</p></div>  
+    <a class="introBoxStyle text-center" id="loginBox" href="login/"><p>LOGIN</p></a>
+    <a class="introBoxStyle text-center" id="createAccountBox" href="signup/"><p>CREATE ACCOUNT</p></a>
+    {% else %}
+
+    <table style="position:relative; left:10%">
+    <tr style="left:10%">
+
+    <td style="width:40%"><a href="logout/">Logout </a></div></td>
+    <td style="width:40%"><a href="competitions/">Competitions </a></div></td>
+    <td style="width:40%"><a href="create_competition/">Create a new Competition</a></td>
+
+    </tr>
+
+    </table>
+    {% endif %}
+  </html>
+{% endblock %}

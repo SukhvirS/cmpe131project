@@ -1,0 +1,16 @@
+.test{
+	font-size: 3vw;
+}
+
+.tableHeader1 td{
+border: 1px solid black;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+
+
+    font-family: "Helvetica Neue", "Open Sans";
+font-weight: 300;
+}
