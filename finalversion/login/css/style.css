@@ -1,0 +1,410 @@
+
+body {
+background: #F9F9F9;
+
+	overflow:hidden;
+}
+
+.mainsection{
+
+	height:100%;
+}
+.container-fluid, .header1 {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.inputposition{
+
+	margin-top: 20%;
+	margin-left: 30%;
+	width: 50%;
+
+}
+
+.thick{
+	padding-left: 25px;
+	font-size: 40px;
+	height: 10%;
+	color: #fff;
+	font-family: 'Raleway',sans-serif;
+}
+
+.sidebar{
+	padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    height:100%;
+}
+
+
+.introBoxStyle{
+
+overflow: hidden;
+position:absolute;
+top: 40%;
+width: 20%;
+height: 8%;
+margin-left: -50%;
+border-style: solid;
+border-width: 0.1px;
+box-shadow: 1px 1px 1px #000000;
+
+}
+
+#cancelBox{
+	width:125px;
+  padding-top:5px;
+  padding-bottom:5px;
+  color:white;
+  border-radius:4px;
+  border: #FA8072 1px solid;
+  
+  margin-top:20px;
+  margin-bottom:20px;
+  float:right;
+  margin-right:16px;
+  
+  font-size:0.8em;
+
+  font-family: "Helvetica Neue", "Open Sans";
+  font-weight: 200;
+
+}
+
+
+
+#signInBox{
+  width:125px;
+  padding-top:5px;
+  padding-bottom:5px;
+  color:white;
+  border-radius:4px;
+  border: #27ae60 1px solid;
+  
+  margin-top:20px;
+  margin-bottom:20px;
+  float:left;
+  margin-left:16px;
+  font-size:0.8em;
+
+  font-family: "Helvetica Neue", "Open Sans";
+  font-weight: 200;
+}
+
+#cancelBox2{
+  width:125px;
+  padding-top:5px;
+  padding-bottom:5px;
+  color:white;
+  border-radius:4px;
+  border: #FA8072 1px solid;
+  
+  margin-top:20px;
+  margin-bottom:20px;
+  float:right;
+  margin-right:16px;
+  
+  font-size:2em;
+
+  font-family: "Helvetica Neue", "Open Sans";
+  font-weight: 200;
+
+}
+
+#submitButton{
+  width:125px;
+  padding-top:5px;
+  padding-bottom:5px;
+  color:white;
+  border-radius:4px;
+  border: #27ae60 1px solid;
+  
+  margin-top:20px;
+  margin-bottom:20px;
+  float:left;
+  margin-left:16px;
+  font-size:2em;
+
+  font-family: "Helvetica Neue", "Open Sans";
+  font-weight: 200;
+}
+
+
+
+.introBoxStyle p {
+	
+position: relative;
+
+left: 1%;
+top: 10%;
+font-size: 3vw;
+font-family: "Helvetica Neue", "Open Sans";
+font-weight: 100;
+
+}
+
+.loginInfoStyle{
+
+overflow: hidden;
+position:absolute;
+top: 40%;
+width: 30%;
+height: 50%;
+margin-left: -50%;
+
+
+}
+.loginInfoStyle label b {
+	
+position: relative;
+left: 20%;
+top: 20%;
+font-size: 3vw;
+font-family: "Helvetica Neue", "Open Sans";
+font-weight: 100;
+
+}
+
+.createAccount1 {
+overflow: hidden;
+position:absolute;
+top: 40%;
+width: 30%;
+height: 70%;
+margin-left: -50%;
+color: #ffffff;
+}
+
+.createAccount1 label b {
+	
+position: relative;
+left: 10%;
+top: 20%;
+font-size: 3vw;
+font-family: "Helvetica Neue", "Open Sans";
+font-weight: 100;
+color: #ffffff;
+
+}
+
+.createAccount2 {
+overflow: hidden;
+position:absolute;
+top: 40%;
+width: 30%;
+height: 80%;
+margin-left: -50%;
+color: #ffffff;
+}
+
+.createAccount2 label b {
+	
+position: relative;
+left: 10%;
+top: 20%;
+font-size: 3vw;
+font-family: "Helvetica Neue", "Open Sans";
+font-weight: 100;
+color: #ffffff;
+
+}
+
+.createAccount3 {
+overflow: hidden;
+position:absolute;
+top: 40%;
+width: 30%;
+height: 50%;
+margin-left: -50%;
+border-style: solid;
+border-width: 0.1px;
+box-shadow: 1px 1px 1px #000000;
+color: #ffffff;
+}
+
+.createAccount3 label b {
+	
+position: relative;
+left: 74%;
+top: 20%;
+font-size: 3vw;
+font-family: "Helvetica Neue", "Open Sans";
+font-weight: 100;
+color: #ffffff;
+
+}
+
+#createAccountBox {
+	width:30%;
+}
+
+#titleBox {
+	height: 30%;
+
+
+}
+
+#titleBox p{
+  background: -webkit-linear-gradient(#3d92ff, #faf347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+
+}
+
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+.select-selected {
+  background-color: #ffffff;
+}
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #000 transparent transparent transparent;
+}
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #000 transparent;
+  top: 7px;
+}
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #000000;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: #ffffff;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    color: #000000;
+}
+
+
+
+label[for=email]{
+	right: 10%;
+}
+
+
+
+
+
+/*
+
+a {
+			color: #4bc2f1;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		#container {
+			perspective: 50px;
+			-webkit-perspective: 50px;
+			-moz-perspective: 50px;
+			-ms-perspective: 50px;
+
+			transform-origin: 50% 100%;
+			-webkit-transform-origin: 50% 100%;
+			-moz-transform-origin: 50% 100%;
+			-ms-transform-origin: 50% 100%;
+
+			opacity: 0.30;
+		}
+
+		#welcome {
+			position: fixed;
+			width: 22rem;
+			left: 50%;
+			top: 45%;
+			margin-top: -1rem;
+			margin-left: -11rem;
+			
+			font-weight: 200;
+			color: #fff;
+			opacity: 0.35;
+			text-align: center;
+			font-size: 0.775rem;
+			line-height: 1.05rem;
+			letter-spacing: 0.135em;
+			word-spacing: -0.075rem;
+		}
+
+		@media screen and (max-width: 400px) {
+			#welcome {
+				font-size: 0.45rem !important;
+			}
+		}
+
+		#browserWidthNotice {
+			font-style: italic;
+			display: none;
+		}
+
+		#logo {
+			position: fixed;
+			right: 0.75rem;
+			bottom: 0.65rem;
+
+			cursor: pointer;
+
+			text-decoration: none;
+			color: #d6d6d6;
+			font-size: 2rem;
+			letter-spacing: 0.025em;
+		}
+
+		#logoDot {
+			color: #d74580;
+		}
+
+		.dot {
+			position: fixed;
+			width: 40px;
+			height: 40px;
+
+			border-radius: 100px;
+			background-color: #4bc2f1;
+		}
+	*/

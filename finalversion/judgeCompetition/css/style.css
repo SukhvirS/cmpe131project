@@ -1,0 +1,453 @@
+
+body {
+background: #F9F9F9;
+
+	overflow:hidden;
+}
+
+.mainsection{
+
+	height:100%;
+}
+.container-fluid, .header1 {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.inputposition{
+
+	margin-top: 20%;
+	margin-left: 30%;
+	width: 50%;
+
+}
+
+.thick{
+	padding-left: 25px;
+	font-size: 40px;
+	height: 10%;
+	color: #fff;
+	font-family: 'Raleway',sans-serif;
+}
+
+.sidebar{
+	padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    height:100%;
+}
+
+
+.introBoxStyle{
+
+overflow: hidden;
+position:absolute;
+top: 40%;
+width: 20%;
+height: 8%;
+/*margin-left: -50%;*/
+border-style: solid;
+border-width: 0.1px;
+box-shadow: 1px 1px 1px #000000;
+
+}
+
+
+.introBoxStyle {
+	
+position: relative;
+
+left: 1%;
+top: 10%;
+font-size: 3vw;
+font-family: "Helvetica Neue", "Open Sans";
+font-weight: 100;
+
+}
+
+.inputSize{
+  width: 60%;
+  height: 15%;
+}
+
+.fontChange {
+font-weight: 50;
+font-size: 1vw;
+font-family: "Helvetica Neue", "Open Sans";
+
+
+
+}
+
+#editProfileBox{
+  position:absolute;
+  left:35%;
+  top: 200%;
+  height: 76%;
+  width: 60%;
+
+}
+
+#addJudgeBox{
+
+  position:absolute;
+  top:200%;
+  left: 35%;
+  height:40%;
+  width: 25%;
+
+}
+
+#addUserBox{
+
+  position:absolute;
+  top:200%;
+  left: 35%;
+  height:40%;
+  width: 25%;
+
+}
+
+#addJudgeInputBox{
+
+  position:absolute;
+  top:200%;
+  left: 70%;
+  height:40%;
+  width: 25%;
+
+}
+
+#addUserInputBox{
+
+  position:absolute;
+  top:200%;
+  left: 70%;
+  height:40%;
+  width: 25%;
+
+}
+
+#judgeBox{
+  position:relative;
+  border: 1px solid black;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+
+    font-family: "Helvetica Neue", "Open Sans";
+font-weight: 300;
+
+}
+
+#judgeBox td{
+
+  width:30%;
+  border: 1px solid black;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+
+    font-family: "Helvetica Neue", "Open Sans";
+font-weight: 300;
+
+}
+
+#userBox{
+  position:relative;
+  border: 1px solid black;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+
+    font-family: "Helvetica Neue", "Open Sans";
+font-weight: 300;
+
+}
+
+#userBox td{
+
+  width:30%;
+  border: 1px solid black;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+
+    font-family: "Helvetica Neue", "Open Sans";
+font-weight: 300;
+
+}
+
+
+
+
+#profileBox{
+  position:absolute;
+  top:10%;
+  left:10%;
+	height:33%;
+}
+
+#addBox{
+
+  position:absolute;
+  left:10%;
+  top: 48%;
+
+}
+
+#createBox{
+  position:absolute;
+  top: 78%;
+  left: 10%;
+}
+
+#homeBox{
+  position:absolute;
+  left:10%;
+  top: 58%;
+}
+
+#manageBox{
+  position:absolute;
+  left:10%;
+  top: 68%;
+}
+
+#createCompetitionList{
+  position: relative;
+ top: -200%;
+  left: 35%;
+  height:76%;
+  width: 60%;
+  padding-right:5%;
+  padding-left:5%;
+}
+
+#createCompetitionList label{
+  font-weight: normal;
+  font-size: 1vw;
+
+}
+
+
+#createCompetitionList input{
+  font-weight: normal;
+  font-size: 1vw;
+
+}
+
+
+#manageCompetitionList{
+  position:relative;
+  top:10%;
+  left: 35%;
+  height:76%;
+  width: 60%;
+}
+
+#manageCompetitionTable tr{
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+
+}
+
+#manageCompetitionTable td{
+ border: 1px solid black;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+
+    font-family: "Helvetica Neue", "Open Sans";
+font-weight: 300;
+
+
+}
+
+#manageCompetitionTable table{
+
+    border: 1px solid black;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+
+    font-family: "Helvetica Neue", "Open Sans";
+    font-weight: 300;
+
+
+}
+
+#manageColumnHeader td{
+    font-weight: 400;
+}
+
+
+#competitionColumn{
+
+  width: 60%;
+}
+
+#judgeColumn{
+  width:20%;
+}
+
+#dateColumn{
+  width: 20%;
+}
+
+#createCompetitionTable tr td{
+
+  width:40%;
+}
+#createCompetitionTable tr td label{
+
+    padding-top: 20px;
+    padding-left:20px;
+    padding-right: 20px;
+
+    font-family: "Helvetica Neue", "Open Sans";
+    font-weight: 300;
+    font-size:2vw;
+
+}
+
+#createCompetitionTable tr td input{
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+    text-align: center;
+    font-family: "Helvetica Neue", "Open Sans";
+    font-weight: 300;
+    font-size:2vw;
+
+}
+
+#createCompetitionTable tr td table td{
+    font-family: "Helvetica Neue", "Open Sans";
+    font-weight: 300;
+    width:10%;
+
+}
+
+#createCompetitionTable tr td table td input{
+    width:100%;
+    text-align: center;
+    font-family: "Helvetica Neue", "Open Sans";
+    font-weight: 300;
+    font-size:1.5vw;
+
+}
+
+#createCompetitionButton{
+  position:relative;
+  left:40%;
+  right:40%;
+}
+
+
+#gradedX {
+
+      font-size: 3vw;
+      color: red;
+    }
+
+#gradedO {
+    font-size:3vw;
+    color: green;
+}
+
+#profileImage {
+  height:50%; 
+  width:60%;
+}
+
+#editProfileTable {
+
+  position:relative;
+
+    left:5%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+
+    font-family: "Helvetica Neue", "Open Sans";
+    font-weight: 300;
+
+}
+
+#editProfileTable td{
+
+    width:40%;
+    padding-bottom:50px;
+    font-family: "Helvetica Neue", "Open Sans";
+font-weight: 300;
+font-size: 2vw;
+}
+
+#editProfileTable tr td label{
+
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+    text-align: center;
+    font-family: "Helvetica Neue", "Open Sans";
+    font-weight: 300;
+    font-size:2vw;
+
+}
+#editProfileTable tr td input{
+    width:70%;
+    text-align: center;
+    font-family: "Helvetica Neue", "Open Sans";
+    font-weight: 300;
+
+}
+
+#editProfileName{
+  font-weight:300;
+
+}
+
+#editProfileEmail{
+  font-weight:300;
+}
+
+#userType{
+  font-weight: 300;
+}
+
+#editProfilePicture{
+
+  font-weight:300;
+  font-size:1vw;
+}
+
+
+
+
+table, td {
+      
+
+}
+
+
+

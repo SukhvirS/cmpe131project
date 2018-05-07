@@ -1,0 +1,384 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+
+
+<script type="text/javascript" src="js/home.js"></script>
+<script type="text/javascript" src="js/velocity.min.js"></script>
+
+
+<head>
+
+<title>Dave's Website</title>
+<meta charset="utf-8">
+		<meta name="viewport" content="width=device=width, initial-scale=1.0">
+		<meta name="description" content="Dave's Website">
+		<meta name="author" content="Dave">	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, minimal-ui">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
+
+		<title>Dave's Website</title>
+		<link rel ="stylesheet" href= "css/bootstrap.css">
+		<link rel ="stylesheet" href="css/style.css">
+		
+</head>
+
+
+
+
+
+<body id="myBody" >
+
+
+
+		<div class="introBoxStyle text-center" id="profileBox">
+			<p>PROFILE</p>
+			<div id="profileName" class="fontChange">Name: Default </div>
+			<div id="profileType" class="fontChange">User Type: Student</div>
+			<div id="profileEmail" class="fontChange">Email: Default</div>
+			<button onclick="localStorage.clear()"> Reset Database</button>
+
+
+
+
+		</div>	
+
+		<div class="introBoxStyle text-center" id="editBox"><p>EDIT</p></div>
+
+		<div class="introBoxStyle text-center" id="createBox"><p style="top: 10%">SUBMISSIONS</p></div>	
+		<div class="introBoxStyle text-center" id="manageBox"><p>COMPETITIONS</p></div>
+
+
+<!--          EDIT PROFILE                           -->
+
+		<div class="introBoxStyle text-center" id="editProfileBox"> 
+		<p class="text-center" style="padding-top: 10px"> Edit Profile</p>
+
+			<table class="text-center" id="editProfileTable">
+				<tr>
+
+					<td>Name</td>
+					<td><input id="editProfileName" type="text" placeholder="Profile Name" name="profileName" required></input><br></td>
+
+
+
+				</tr>
+				<tr>
+					<td>Email</td>
+
+					<td><input id="editProfileEmail" type="text" placeholder="Email" name="profileEmail" required></input><br></td>
+
+
+
+				</tr>
+
+				<tr>
+					<td>User Type</td>
+
+					<td><p id="userType">Judge</p></td>
+
+				</tr>
+
+			</table>
+
+			<button onclick="editProfile()" id="editProfileButton" >Confirm</button>
+
+		</div>
+			
+
+<!--            COMPETITION                      -->
+
+
+		<div class="introBoxStyle" id="manageCompetitionList"><p class="text-center" style="padding-top: 5px">Competitions</p>
+
+			<table class="text-center" id="manageCompetitionTable">
+
+  				<tr id="manageColumnHeader">
+				    <td id="competitionColumn">Competition</td>
+				    <td id="judgeColumn">Host</td>
+				    <td id="categoryColumn">Category</td>
+				    <td id="dateColumn">Starting Date</td>
+				    <td id="endDateColumn">Ending Date</td>
+				    <td id="gradedColumn"> Submission Sent</td>
+				    <td> Submit </td>
+			    </tr>
+
+			    <tr>
+			    	<td >MAYWEATHER COMPETITION</td>
+			    	<td >DAVE WILLIAMS</td>
+			    	<td >MMA</td>
+			    	<td >04/27/18</td>
+			    	<td > 23/12/12</td>
+			    	<td id="gradedO">O</td>
+			    	<td> <button> + </button> </td>
+			    </tr>
+
+			    
+		</table>
+
+
+
+
+
+		</div>
+   
+<!--          SUBMISSIONS                     -->
+
+
+		<div class="introBoxStyle" id="createSubmissionList">
+
+			<p class="text-center" style="padding-top:10px">Submissions</p>
+			<table class="text-center" id="createSubmissionTable">
+				
+				<tr id="createSubmissionHeader">
+				    <td >Submission</td>
+				    <td >Competition</td>
+				    <td >Host</td>
+				    <td >Starting Date</td>
+				    <td >Ending Date</td>
+				    <td > Graded? </td>
+			    </tr>
+
+			    <tr>
+			    	<td >MAYWEATHER COMPETITION</td>
+			    	<td >DAVE WILLIAMS</td>
+			    	<td >MMA</td>
+			    	<td >04/27/18</td>
+			    	<td > 23/12/12</td>
+			    	<td id="gradedO">O</td>
+			    </tr>
+
+
+    		</table>
+    			<br>
+
+
+
+		</div>
+
+
+		
+
+		<script>
+		function createCompetitionFunction() {
+		    var table = document.getElementById("manageCompetitionTable");
+		    var row = table.insertRow(1);
+		    var cell1 = row.insertCell(0);
+		    var cell2 = row.insertCell(1);
+		    var cell3 = row.insertCell(2);
+		    var cell4 = row.insertCell(3);
+		    var cell5 = row.insertCell(4);
+		    var cell6 = row.insertCell(5);
+
+		    var day = document.getElementById("dayInput").value;
+		    var month = document.getElementById("monthInput").value;
+		    var year = document.getElementById("yearInput").value;
+
+		    var endDay = document.getElementById("endDayInput").value;
+		    var endMonth = document.getElementById("endMonthInput").value;
+		    var endYear = document.getElementById("endYearInput").value;
+
+		    var date = month + "/" + day + "/" + year;
+
+		    competitionName = document.getElementById("competitionInput").value;
+		    hostName = document.getElementById("hostInput").value;
+		    categoryName = document.getElementById("categoryInput").value;
+
+		    cell1.className = 'competitionNameClass';
+
+		    cell1.innerHTML = competitionName;
+		    cell2.innerHTML = hostName;
+		    cell3.innerHTML = categoryName;
+		    cell4.innerHTML = date;
+		    cell5.innerHTML = endDate;
+		    cell6.innerHTML = "X";
+		    cell6.id = "gradedX";
+
+		    var competitionObject = {'submitType': 'competition', 'competitionName': competitionName, 'hostName': hostName, 'categoryName': categoryName, 'startDay': day, 'startMonth': month, 'startYear': year, 'endDay': endDay, 'endMonth': endMonth, 'endYear': endYear, 'graded': 'no'};
+
+		    var storageCount = localStorage.length;
+		    localStorage.setItem(storageCount + 1, JSON.stringify(competitionObject));
+
+		    for (var i = 0; i < localStorage.length + 1; i++){
+			var d = localStorage.getItem(i);
+			console.log(d);
+			}
+
+		    				
+			window.location.href = '../home/home.html';
+
+  					
+
+
+
+		}
+
+		</script>
+
+		<script>
+		function editProfile() {
+		    
+
+		    var name = document.getElementById("profileName");
+		    var email = document.getElementById("profileEmail");
+
+		    name.innerHTML = "Name: " + document.getElementById("editProfileName").value;
+		    email.innerHTML = "Email: " + document.getElementById("editProfileEmail").value;
+
+
+		  
+
+
+
+		}
+
+		</script>
+
+
+		
+
+		
+			
+			
+
+		
+		
+
+
+
+
+</body>
+
+
+
+<script>
+
+	for(var i = 0; i < localStorage.length + 1; i++){
+		var a = localStorage.getItem(i);
+
+		if(a != null){
+			var b = JSON.parse(a);
+			console.log('ok');
+
+			if(b['submitType'] == 'competition'){
+				console.log('yes');
+				var table = document.getElementById("manageCompetitionTable");
+		    	var row = table.insertRow(1);
+		    	var cell1 = row.insertCell(0);
+		    	var cell2 = row.insertCell(1);
+		    	var cell3 = row.insertCell(2);
+			    var cell4 = row.insertCell(3);
+			    var cell5 = row.insertCell(4);
+			    var cell6 = row.insertCell(5);
+			    var cell7 = row.insertCell(6);
+
+				var startDay = b['startDay'];
+			    var startMonth = b['startMonth'];
+			    var startYear = b['startYear'];
+
+			    var startDate = startMonth + "/" + startDay + "/" + startYear;
+
+			    var endDay = b['endDay'];
+			    var endMonth = b['endMonth'];
+			    var endYear = b['endYear'];
+
+			    var endDate = endMonth + "/" + endDay + "/" + endYear;
+
+			    competitionName = b['competitionName'];
+			    hostName = b['hostName'];
+			    categoryName = b['categoryName'];
+
+			    cell1.className = 'competitionNameClass';
+			    cell1.innerHTML = competitionName;
+			    cell1.onclick = function() {toJudgeCompetition(this)};
+
+			    cell2.innerHTML = hostName;
+			    cell3.innerHTML = categoryName;
+			    cell4.innerHTML = startDate;
+			    cell5.innerHTML = endDate;
+
+
+			    if (b['graded'] == 'no'){
+			    cell6.innerHTML = "X";
+
+			    }
+
+			    else if (b['graded'] == 'yes'){
+			    cell6.innerHTML = "O";
+				}
+
+			    cell6.id = "gradedX";
+
+			    var button = document.createElement("button");
+			    button.innerHTML = "+";
+			    cell7.appendChild(button);
+
+
+			}
+
+		}
+	}
+
+
+</script>
+
+<script>
+	  		var name1 = document.getElementById("profileName");
+		    var email = document.getElementById("profileEmail");
+
+
+			var moveUser = localStorage.getItem('current');
+			var currentUser = JSON.parse(moveUser);
+			console.log(moveUser);
+
+			var firstName = currentUser['firstName'];
+			var lastName = currentUser['lastName'];
+			var userEmail = currentUser['email'];
+			var userType = currentUser['type'];
+
+			console.log(userEmail);
+
+			profileType.innerHTML = "User Type: " + userType;
+			email.innerHTML ="Email: " + userEmail;
+
+			name1.innerHTML ="Name: " + firstName + " " + lastName;
+
+		
+</script>
+
+<script type="text/javascript">
+function toJudgeCompetition(competition)
+{
+    for(var i = 0; i < localStorage.length + 1; i++){
+		var a = localStorage.getItem(i);
+		console.log(competition.innerHTML);
+		if(a != null){
+			var b = JSON.parse(a);
+			console.log(b['competitionName']);
+			if(b['competitionName'] == competition.innerHTML){
+
+				console.log('ok');
+
+				var currentCompetition = {'submitType': b['submitType'], 'competitionName': b['competitionName'], 'hostName': b['hostName'], 'categoryName': b['categoryName'], 'startDay': b['startDay'], 'startMonth': b['startMonth'], 'startYear': b['startYear'], 'endDay': b['endDay'], 'endMonth': b['endMonth'], 'endYear': b['endYear'], 'graded': b['graded']};
+
+				console.log(currentCompetition);
+				localStorage.setItem('currentCompetition', JSON.stringify(currentCompetition));
+				window.location.href = '../judgeCompetition/judgeCompetition.html';
+
+			}
+		}
+	}
+}
+</script>
+
+<script>
+
+$('#myBody').velocity({'background-color': '#F9F9F9'});
+					$('#manageCompetitionList').velocity({'left': '35%'}, 250);
+					$('#createSubmissionList').velocity({'top': '200%'}, 250);
+					$('#editProfileBox').velocity({'top': '200%'}, 250);
+
+</script>
+
+</html>

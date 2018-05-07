@@ -1,0 +1,397 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+
+
+<script type="text/javascript" src="js/judgeCompetition.js"></script>
+<script type="text/javascript" src="js/velocity.min.js"></script>
+
+
+<head>
+
+<title>Dave's Website</title>
+<meta charset="utf-8">
+		<meta name="viewport" content="width=device=width, initial-scale=1.0">
+		<meta name="description" content="Dave's Website">
+		<meta name="author" content="Dave">	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, minimal-ui">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
+
+		<title>Dave's Website</title>
+		<link rel ="stylesheet" href= "css/bootstrap.css">
+		<link rel ="stylesheet" href="css/style.css">
+		
+</head>
+
+
+
+
+
+<body id="myBody" >
+
+
+
+		<div class="introBoxStyle text-center" id="profileBox">
+			<p>COMPETITION</p>
+			<div id="competitionName" class="fontChange"> Competition Name: Default </div>
+			<div id="hostName" class="fontChange"> Host Name: Default </div>
+			<div id="categoryName" class="fontChange"> Category Name: Default </div>
+			<div id="startingDate" class ="fontChange"> Starting Date: </div>
+			<div id="endDate" class ="fontChange"> End Date: </div>
+			<div id="judgeNumber" class="fontChange"> Number of Judges: 0</div>
+			<div id="userNumber" class="fontChange">Number of Participants: 0</div>
+
+
+
+
+		</div>	
+
+		<div class="introBoxStyle text-center" id="addBox"><p>ADD</p></div>
+		<div class="introBoxStyle text-center" id="homeBox"><p>HOME</p></div>
+		<div class="introBoxStyle text-center" id="manageBox"><p>SUBMISSIONS</p></div>
+		<div class="introBoxStyle text-center" id="createBox"><p style="top: 10%">EDIT</p></div>	
+		
+
+<!--          ADD                           -->
+
+<div class="introBoxStyle text-center" id="addJudgeBox"> 
+		<p class="text-center" style="padding-top: 10px; font-size:1.5vw"> Judge List</p>
+		<table class="text-center" id="judgeBox">
+			<tr>
+				<td>Judge Name</td>
+				<td>Email</td>
+
+			</tr>
+		</table>
+
+</div>
+
+<div class="introBoxStyle text-center" id="addUserBox"> 
+		<p class="text-center" style="padding-top: 10px; font-size:1.5vw"> Participant List</p>
+		<table class="text-center" id="userBox">
+			<tr>
+				<td>Participant Name</td>
+				<td>Email</td>
+
+			</tr>
+		</table>
+
+</div>
+
+<div class="introBoxStyle text-center" id="addJudgeInputBox"> 
+		<p class="text-center" style="padding-top: 10px; font-size:1.5vw"> Add Judge</p>
+
+		<p class="fontChange"> Judge Name </p>
+		<input id="addJudgeName" class="inputSize"></input>
+		<p class="fontChange"> Judge Email </p>
+		<input id="addJudgeEmail" class="inputSize"></input>
+		<br>
+
+		<button id="addJudgeButton" style="font-size:1.5vw" onclick="addJudgeList()"> ADD </button>
+
+
+</div>
+
+<div class="introBoxStyle text-center" id="addUserInputBox"> 
+		<p class="text-center" style="padding-top: 10px; font-size:1.5vw"> Add Participant</p>
+		<p class="fontChange"> Participant Name </p>
+		<input id="addUserName" class="inputSize"></input>
+		<p class="fontChange"> Participant Email </p>
+		<input id="addUserEmail" class="inputSize"></input>
+		<br>
+
+		<button id="addUserButton" style="font-size:1.5vw" onclick="addUserList()"> ADD </button>
+
+
+
+</div>
+
+
+
+
+
+<!--           MANAGE SUBMISSIONS                 -->
+
+
+		<div class="introBoxStyle" id="manageCompetitionList"><p class="text-center" style="padding-top: 5px"> Submissions</p>
+
+			<table class="text-center" id="manageCompetitionTable">
+
+  				<tr id="manageColumnHeader">
+				    <td id="competitionColumn">Submission Name</td>
+				    <td id="judgeColumn">Participant</td>
+				    <td id="categoryColumn">Category</td>
+				    <td id="dateColumn">Date</td>
+				    <td id="gradedColumn"> Grade</td>
+			    </tr>
+
+			    <tr>
+			    	<td >MAYWEATHER COMPETITION</td>
+			    	<td >DAVE WILLIAMS</td>
+			    	<td >MMA</td>
+			    	<td >04/27/18</td>
+			    	<td ><input style="width: 90%"></input></td>
+			    </tr>
+
+			    
+		</table>
+
+
+
+
+
+		</div>
+   
+<!--          EDIT COMPETITION                      -->
+
+		<div class="introBoxStyle" id="createCompetitionList">
+
+			<p class="text-center" style="padding-top:10px"> Edit Competition</p>
+			<table class="text-center" id="createCompetitionTable">
+				<tr>
+
+					<td> <label for="competitionName">Competition Name<br></label><br></td>
+					<td> <label for="hostName">Host Name<br></label><br></td>
+					
+				</tr>
+					
+				<tr>
+					<td><input id="competitionInput" type="text" placeholder="Enter Competition" name="competitionName1" required></input><br></td>
+					<td><input id="hostInput" type="text" placeholder="Host Name" name="hostName" required></input><br></td>
+				</tr>
+
+				<tr>
+
+					<td><label for="date">Starting Date mm/dd/yyyy<br></label><br></td>
+					<td><label for="date">End Date mm/dd/yyyy<br></label><br></td>
+
+
+				</tr>
+
+					<td>
+						<table>
+							<td><input id="startingMonthInput" type="text" placeholder="Month" name="month" required></input><br></td>
+							<td><input id="startingDayInput" type="text" placeholder="Day" name="day" required></input><br></td>
+							<td><input id="startingYearInput" type="text" placeholder="Year" name="year" required></input><br></td>
+						</table>
+						
+
+					</td>
+
+					<td>
+						<table>
+							<td><input id="endMonthInput" type="text" placeholder="Month" name="month" required></input><br></td>
+							<td><input id="endDayInput" type="text" placeholder="Day" name="day" required></input><br></td>
+							<td><input id="endYearInput" type="text" placeholder="Year" name="year" required></input><br></td>
+						</table>
+						
+
+					</td>
+
+
+
+				</tr>
+
+				<tr> 
+					<td>
+						<label> Category</label>
+					</td>
+				</tr>
+
+	    		<tr>					
+	    			<td>
+	    				<input id="categoryInput" type="text" placeholder="Category" name="category" required></input><br>
+	    			</td>
+
+	    		</tr>
+
+	    			
+	    			
+
+
+    		</table>
+    			<br>
+
+	    			<button onclick="editProfile()" id="createCompetitionButton" >Confirm</button>
+
+
+		</div>
+
+
+		
+
+		<script>
+		function editCompetitionFunction() {
+		    var table = document.getElementById("manageCompetitionTable");
+		    var row = table.insertRow(1);
+		    var cell1 = row.insertCell(0);
+		    var cell2 = row.insertCell(1);
+		    var cell3 = row.insertCell(2);
+		    var cell4 = row.insertCell(3);
+		    var cell5 = row.insertCell(4);
+
+		    var day = document.getElementById("dayInput").value;
+		    var month = document.getElementById("monthInput").value;
+		    var year = document.getElementById("yearInput").value;
+
+		    var date = month + "/" + day + "/" + year;
+
+
+
+		    cell1.innerHTML = document.getElementById("competitionInput").value;
+		    cell2.innerHTML = document.getElementById("hostInput").value;
+		    cell3.innerHTML = document.getElementById("categoryInput").value;
+		    cell4.innerHTML = date;
+		    cell5.innerHTML = "X";
+		    cell5.id = "gradedX";
+
+
+
+		}
+
+		</script>
+
+		<script>
+		function editProfile() {
+		    
+
+		    var competitionName = document.getElementById("competitionName");
+	  		var hostName = document.getElementById("hostName");
+	  		var categoryName = document.getElementById("categoryName");
+		    var startDate = document.getElementById("startingDate");
+		    var endDate = document.getElementById("endDate");
+
+
+		    var editName = document.getElementById("competitionInput").value;
+		    var editHost = document.getElementById("hostInput").value;
+		    var editCategory = document.getElementById("categoryInput").value;
+		    var editStartDay = document.getElementById("startingDayInput").value;
+		    var editStartMonth = document.getElementById("startingMonthInput").value;
+		    var editStartYear = document.getElementById("startingYearInput").value;
+
+			var editEndDay = document.getElementById("startingDayInput").value;
+		    var editEndMonth = document.getElementById("startingMonthInput").value;
+		    var editEndYear = document.getElementById("startingYearInput").value;
+
+		    competitionName.innerHTML = "Competition Name: " + editName;
+		    hostName.innerHTML = "Host Name: " + editHost;
+		    categoryName.innerHTML = "Category Name: " + editCategory;
+		    startDate.innerHTML = "Starting Date: " + editStartMonth + "/" + editStartDay + "/" + editStartYear;
+		    endDate.innerHTML = "Ending Date: " +  editEndMonth + "/" + editEndDay + "/" + editEndYear;
+		}
+
+		</script>
+
+</body>
+
+<script>
+	  		var competitionName = document.getElementById("competitionName");
+	  		var hostName = document.getElementById("hostName");
+	  		var categoryName = document.getElementById("categoryName");
+		    var startDate = document.getElementById("startingDate");
+		    var endDate = document.getElementById("endDate");
+
+
+			var moveCompetition = localStorage.getItem("currentCompetition");
+			var currentCompetition = JSON.parse(moveCompetition);
+			console.log(currentCompetition);
+
+			var setCompName = currentCompetition['competitionName'];
+			var setHostName = currentCompetition['hostName'];
+			var setCatName = currentCompetition['categoryName'];
+
+			competitionName.innerHTML = "Competition Name: " + setCompName;
+			hostName.innerHTML = "Host Name: " + setHostName;
+			categoryName.innerHTML = "Category Name: "  + setCatName;
+
+			var startingDate = currentCompetition['startMonth'] + "/" + currentCompetition['startDay'] + "/" + currentCompetition['startYear'];
+
+			var endingDate = currentCompetition['endMonth'] + "/" + currentCompetition['endDay'] + "/" + currentCompetition['endYear'];
+
+			startDate.innerHTML = "Starting Date: " + startingDate;
+			endDate.innerHTML = "Ending Date: " + endingDate;
+
+			console.log(currentCompetition);
+
+
+		
+</script>
+
+
+
+<script>
+var judgeCount = 0;
+
+function addJudgeList(){
+	var table = document.getElementById("judgeBox");
+	var row = table.insertRow(1);
+	var cell1 = row.insertCell(0);
+	var cell2 = row.insertCell(1);
+
+	var judgeName = document.getElementById("addJudgeName").value;
+	var judgeEmail = document.getElementById("addJudgeEmail").value;
+
+	cell1.innerHTML = judgeName;
+	cell2.innerHTML = judgeEmail;
+
+	console.log(judgeName);
+
+	judgeCount++;
+	var count = document.getElementById("judgeNumber");
+	count.innerHTML = "Number of Judges: " + judgeCount;
+
+}
+</script>
+
+<script>
+
+var userCount = 0;
+
+function addUserList(){
+	var table = document.getElementById("userBox");
+	var row = table.insertRow(1);
+	var cell1 = row.insertCell(0);
+	var cell2 = row.insertCell(1);
+
+	var userName = document.getElementById("addUserName").value;
+	var userEmail = document.getElementById("addUserEmail").value;
+
+	cell1.innerHTML = userName;
+	cell2.innerHTML = userEmail;
+
+	userCount++;
+	var count = document.getElementById("userNumber");
+	count.innerHTML = "Number of Participants: " + userCount;
+
+
+}
+</script>
+
+<!--
+<script>
+	  		var name1 = document.getElementById("profileName");
+		    var email = document.getElementById("profileEmail");
+
+
+			var moveUser = localStorage.getItem('current');
+			var currentUser = JSON.parse(moveUser);
+			console.log(moveUser);
+
+			var firstName = currentUser['firstName'];
+			var lastName = currentUser['lastName'];
+			var userEmail = currentUser['email'];
+			var userType = currentUser['type'];
+
+			console.log(userEmail);
+
+			profileType.innerHTML = "User Type: " + userType;
+			email.innerHTML ="Email: " + userEmail;
+
+			name1.innerHTML ="Name: " + firstName + " " + lastName;
+
+		
+</script>
+-->
+
+</html>
